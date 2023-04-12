@@ -127,6 +127,45 @@ body {
       font-size: 22px;
     }
   }
+  .es-benefits{
+    background-color: $dark-green;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__tile {
+      width: 100%;
+      padding: 15px;
+    }
+    &__title {
+      @include text;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 15px;
+    }
+    &__subtitle {
+      @include text;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      padding-bottom: 15px;
+    }
+    &__text {
+      @include text;
+      color: #fff;
+    }
+    &__list {
+      margin: 0;
+      padding: 0 15px;
+      color: #fff;
+      & li {
+        padding-bottom: 8px;
+      }
+    }
+
+  }
 }
 @media screen and (min-width: 650px) {
   .es-kv {
@@ -170,7 +209,15 @@ body {
     &__packshot {
       max-height: 430px !important;
     }
-
+  }
+  .es-benefits {
+    &__wrapper {
+      flex-wrap: nowrap !important;
+    }
+    &__tile {
+      width: 50% !important;
+      padding: 30px !important;
+    }
   }
 }
 @media screen and (min-width: 900px) {
