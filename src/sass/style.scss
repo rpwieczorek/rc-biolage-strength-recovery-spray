@@ -4,6 +4,7 @@ $regular: 'Noto Sans', sans-serif;
 $orange: #f08700;
 $blue: #009ee3;
 $dark-green: #67803b;
+$light-green: #c2cca9;
 
 html,
 body {
@@ -79,7 +80,7 @@ body {
   }
 
   .es-kv {
-    background-color: #c2cca9;
+    background-color: $light-green;
     margin: 0 auto;
     &__wrapper {
       position: relative;
@@ -155,16 +156,211 @@ body {
     &__text {
       @include text;
       color: #fff;
+      font-weight: 300;
     }
     &__list {
       margin: 0;
       padding: 0 15px;
       color: #fff;
+      font-weight: 300;
       & li {
         padding-bottom: 8px;
       }
     }
 
+  }
+  .es-ingredients{
+    background-color: $light-green;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__left {
+      width: 100%;
+      padding: 20px 50px;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__image {
+      @include img;
+    }
+    &__title {
+      @include text;
+      color: $dark-green;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 25px;
+    }
+    &__subtitle {
+      @include text;
+      color: $dark-green;
+      font-size: 16px;
+      font-weight: 700;
+      padding-bottom: 25px;
+    }
+    &__text {
+      @include text;
+      color: $dark-green;
+      padding-bottom: 25px;
+      font-weight: 300;
+    }
+    &__list {
+      margin: 0;
+      padding: 0 15px;
+      color: $dark-green;
+      font-weight: 300;
+      & li {
+        padding-bottom: 8px;
+      }
+    }
+  }
+  .es-use{
+    background-color: $light-green;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__left {
+      width: 100%;
+      padding: 20px 50px;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__image {
+      @include img;
+    }
+    &__title {
+      @include text;
+      color: $dark-green;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 25px;
+    }
+    &__subtitle {
+      @include text;
+      color: $dark-green;
+      font-size: 16px;
+      font-weight: 700;
+      padding-bottom: 25px;
+    }
+    &__text {
+      @include text;
+      color: $dark-green;
+      padding-bottom: 25px;
+      font-weight: 300;
+    }
+    &__list {
+      margin: 0;
+      padding: 0 15px;
+      color: $dark-green;
+      font-weight: 300;
+      & li {
+        padding-bottom: 8px;
+      }
+    }
+  }
+  .es-why{
+    background-color: $dark-green;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__tile {
+      width: 100%;
+      padding: 15px;
+    }
+    &__title {
+      @include text;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 15px;
+    }
+    &__subtitle {
+      @include text;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      padding-bottom: 15px;
+    }
+    &__text {
+      @include text;
+      color: #fff;
+      font-weight: 300;
+    }
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+    }
+    &__single {
+      width: 100px;
+    }
+    &__item {
+      @include img;
+    }
+    &__desc {
+      @include text;
+      font-size: 11px;
+      text-align: center;
+      color: #fff;
+      padding-top: 10px;
+    }
+  }
+  .es-ba {
+    position: relative;
+    min-height: 400px;
+    &__image {
+      @include img;
+      max-height: 420px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    &__title {
+      @include text;
+      color: $dark-green;
+      font-weight: 700;
+      font-size: 22px;
+      padding: 15px;
+      text-align: center;
+    }
+    &__before {
+      @include text;
+      color: $dark-green;
+      font-weight: 700;
+      font-size: 22px;
+      padding: 15px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+    &__after {
+      @include text;
+      color: $dark-green;
+      font-weight: 700;
+      font-size: 22px;
+      padding: 15px;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
+@media screen and (min-width: 425px) {
+  .es-ba {
+    min-height: 450px !important;
+  }
+}
+@media screen and (min-width: 480px) {
+  .es-ba {
+    min-height: 490px !important;
   }
 }
 @media screen and (min-width: 650px) {
@@ -211,6 +407,55 @@ body {
     }
   }
   .es-benefits {
+    &__wrapper {
+      flex-wrap: nowrap !important;
+    }
+    &__tile {
+      width: 50% !important;
+      padding: 30px !important;
+    }
+  }
+  .es-ingredients {
+    &__wrapper {
+      flex-wrap: nowrap !important;
+    }
+    &__left {
+      width: 50% !important;
+    }
+    &__right {
+      width: 50% !important;
+      height: 492px;
+      overflow: hidden;
+    }
+    &__image {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  .es-use {
+    &__wrapper {
+      flex-wrap: nowrap !important;
+    }
+    &__left {
+      width: 50% !important;
+    }
+    &__right {
+      width: 50% !important;
+      height: 492px;
+      overflow: hidden;
+    }
+    &__image {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  .es-why {
     &__wrapper {
       flex-wrap: nowrap !important;
     }
